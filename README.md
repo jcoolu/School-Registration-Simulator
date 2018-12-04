@@ -5,7 +5,7 @@
 
 ### Kirby:
 Course <br />
-CourseDataBase <br />
+CourseDatabase <br />
 ### Guy:
 
 ### Jamie:
