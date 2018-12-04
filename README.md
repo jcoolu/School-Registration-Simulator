@@ -4,8 +4,8 @@
 ### Thierno:
 
 ### Kirby:
-Course\n
-CourseDataBase
+Course <br />
+CourseDataBase <br />
 ### Guy:
 
 ### Jamie:
