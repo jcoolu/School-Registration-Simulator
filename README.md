@@ -16,7 +16,7 @@ CourseDataBase <br />
 
 
 ## Changes
-11-23-18: Added Course classes including simple GUI
+11-23-18: Added Course classes including simple GUI <br />
 
 
 
