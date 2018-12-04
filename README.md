@@ -4,7 +4,7 @@
 ### Thierno:
 
 ### Kirby:
-Course
+Course\n
 CourseDataBase
 ### Guy:
 
