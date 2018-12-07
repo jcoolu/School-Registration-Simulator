@@ -1,0 +1,7 @@
+mgadiaga_0000,Thierno0391,Mamethierno,Gadiaga,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,94,3.89,mgadiaga.png
+jcoulombe_0001,Jamie3221,Jamie, Coulombe,65 yles avenue,pawtucket,ri,02860,4015897862,Computer Science,Mathematics,87,3.89,jcoulombe.png
+ofelizlima_002,Oliver8194,Oliver Feliz,Lima,4 yles avenue,providence,ri,02860,4017194562,Computer Science,Music,72,3.89,ofelizlima.png
+kfosberg_0003,kirby3641,Kirby,Fosberg,24 dangerous avenue,Woonsocket,ri,02860,4015896523,Computer Science,Art,94,3.89,kfosber.png
+gcastigliego_0004,Gaetano1079,Gaetano,Castigliego,24 crazy avenue,Fall river,ri,02860,4018884562,Computer Science,Biology,100,3.89,gcastigliego.png
+mgarcia_0005,Ellis6800,Ellis,Garcia,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,94,3.89,mgarcia.png
+astudent_0006,Student#xxxx,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,94,3.89,mgadiaga.png
