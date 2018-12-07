@@ -10,17 +10,15 @@ AdminCourseTab</br>
 Course <br />
 CourseDatabase <br />
 ### Guy:
-
+DeRegisterationTab</br>
 ### Jamie:
 CampusMapTab</br>
 PersonalInfoTab</br>
 Student</br>
 ### Ellis:
-
+StudentDatabase</br>
 ### Oliver:
 RegistrationTab</br>
-DeRegisterationTab</br>
-
 ## Changes
 11-23-18: Added Course classes including simple GUI <br />
 
