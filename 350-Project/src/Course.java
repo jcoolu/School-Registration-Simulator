@@ -10,8 +10,8 @@ public class Course {
 	
 	private String courseName;
 	private String courseCode;
-	private String credits;
-	private String courseCapacity;
+	private int credits;
+	private int courseCapacity;
 	/**
 	 * @param aCourseName 	Name of the course.
 	 * @param aCourseCode 	Code specific to that course
@@ -19,76 +19,97 @@ public class Course {
 	 * @param aCapacity		Total student capacity of this course
 	 */
 	public Course(String aCourseName, String aCourseCode, 
-			String aCredits, String aCapacity){
+			int aCredits, int aCapacity){
 		courseName = 	 aCourseName;
 		courseCode = 	 aCourseCode;
 		credits = 		 aCredits;
 		courseCapacity = aCapacity;
 	}
-	
+	/**
+	 * Empty constructor
+	 */
 	public Course(){
 		courseName = 	 null;
 		courseCode = 	 null;
-		credits = 		 null;
-		courseCapacity = null;
+		credits = 		 -1;
+		courseCapacity = -1;
 	}
-
+	/**
+	 * @return courseName
+	 */
 	public String getCourseName() {
 		return courseName;
 	}
+	/**
+	 * @param courseName
+	 */
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
+	/**
+	 * @return courseCode
+	 */
 	public String getCourseCode() {
 		return courseCode;
 	}
+	/**
+	 * @param courseCode
+	 */
 	public void setCourseCode(String courseCode) {
 		this.courseCode = courseCode;
 	}
-	public String getCredits() {
+	/**
+	 * @return credits
+	 */
+	public int getCredits() {
 		return credits;
 	}
-	public void setCredits(String credits) {
+	/**
+	 * @param credits
+	 */
+	public void setCredits(int credits) {
 		this.credits = credits;
 	}
-	public String getCourseCapacity() {
+	/**
+	 * @return courseCapacity
+	 */
+	public int getCourseCapacity() {
 		return courseCapacity;
 	}
-	public void setCourseCapacity(String courseCapacity) {
+	/**
+	 * @param courseCapacity
+	 */
+	public void setCourseCapacity(int courseCapacity) {
 		this.courseCapacity = courseCapacity;
 	}
-	
+	/**
+	 * @return string of course seperated by commas
+	 */
 	@Override
 	public String toString() {
-		return "Course \ncourseName=" + courseName + 
-				"\n, courseCode=" + courseCode
-				+ "\n, credits=" + credits + 
-				"\n, courseCapacity=" + courseCapacity;
+		return 	courseName 	+ "," + 
+				courseCode 	+ "," +
+				credits 	+ "," +
+				courseCapacity + "," + "\n";
 	}
-	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((courseCapacity == null) ? 0 : courseCapacity.hashCode());
-		result = prime * result + ((courseName == null) ? 0 : courseName.hashCode());
+		result = prime * result + courseCapacity;
 		result = prime * result + ((courseCode == null) ? 0 : courseCode.hashCode());
-		result = prime * result + ((credits == null) ? 0 : credits.hashCode());
+		result = prime * result + ((courseName == null) ? 0 : courseName.hashCode());
+		result = prime * result + credits;
 		return result;
 	}
-
+	/**
+	 * Generates equals based on hashcode
+	 */
 	@Override
 	public boolean equals(Object other) {
-
-	    if (other == null) {
-	        return false;
-	    }
-	    if (this == other) {
-	        return true;
-	    }
-	    return (this.hashCode() == other.hashCode());
+		if(other == null)
+			return false;
+		return other.hashCode() == this.hashCode();
 	}
-
-
 }
 
