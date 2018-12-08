@@ -21,6 +21,7 @@ StudentDatabase</br>
 RegistrationTab</br>
 ## Changes
 11-23-18: Added Course classes including simple GUI <br />
+12-8-18: Delegated all classes <br />
 
 
 
