@@ -39,12 +39,12 @@ public class CourseDatabase {
 		
 		Scanner scan = new Scanner(new File(file));
 		scan.useDelimiter(",");
-		int i = 0;
+		int i = 1;
 		while(scan.hasNext()){
 			String name = scan.next();
 			String code = scan.next();
-			int credits = scan.nextInt();
-			int capacity = scan.nextInt();
+			String credits = scan.next();
+			String capacity = scan.next();
 			courseDB.set(i, new Course(name, code, credits, capacity));
 			i++;
 		}
@@ -52,6 +52,25 @@ public class CourseDatabase {
 		scan.close();
 		return courseDB;
 	}
+	public ArrayList<Course> createArrayList2(String file) throws IOException {
+        Scanner scan = new Scanner(new File(file));
+		scan.useDelimiter(",");
+        ArrayList<Course> courseAL = new ArrayList<Course>();
+
+        while (scan.hasNextLine()) {
+            String name = scan.nextLine();
+            String code = scan.nextLine();
+            String cred = scan.next();
+            String cap = scan.next();
+            courseAL.add(new Course(name,code,cred,cap));
+        }
+        for (Course c : courseAL) {
+            System.out.println(c.toString());
+        }
+        scan.close();
+        return courseAL;
+    }
+
 	
 	/**
 	 * @param file The text file containing the database

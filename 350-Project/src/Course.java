@@ -10,8 +10,8 @@ public class Course {
 	
 	private String courseName;
 	private String courseCode;
-	private int credits;
-	private int courseCapacity;
+	private String credits;
+	private String courseCapacity;
 	/**
 	 * @param aCourseName 	Name of the course.
 	 * @param aCourseCode 	Code specific to that course
@@ -19,7 +19,7 @@ public class Course {
 	 * @param aCapacity		Total student capacity of this course
 	 */
 	public Course(String aCourseName, String aCourseCode, 
-			int aCredits, int aCapacity){
+			String aCredits, String aCapacity){
 		courseName = 	 aCourseName;
 		courseCode = 	 aCourseCode;
 		credits = 		 aCredits;
@@ -31,8 +31,8 @@ public class Course {
 	public Course(){
 		courseName = 	 null;
 		courseCode = 	 null;
-		credits = 		 -1;
-		courseCapacity = -1;
+		credits = 		 null;
+		courseCapacity = null;
 	}
 	/**
 	 * @return courseName
@@ -61,25 +61,25 @@ public class Course {
 	/**
 	 * @return credits
 	 */
-	public int getCredits() {
+	public String getCredits() {
 		return credits;
 	}
 	/**
 	 * @param credits
 	 */
-	public void setCredits(int credits) {
+	public void setCredits(String credits) {
 		this.credits = credits;
 	}
 	/**
 	 * @return courseCapacity
 	 */
-	public int getCourseCapacity() {
+	public String getCourseCapacity() {
 		return courseCapacity;
 	}
 	/**
 	 * @param courseCapacity
 	 */
-	public void setCourseCapacity(int courseCapacity) {
+	public void setCourseCapacity(String courseCapacity) {
 		this.courseCapacity = courseCapacity;
 	}
 	/**
@@ -92,24 +92,28 @@ public class Course {
 				credits 	+ "," +
 				courseCapacity + "," + "\n";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + courseCapacity;
+		result = prime * result + ((courseCapacity == null) ? 0 : courseCapacity.hashCode());
 		result = prime * result + ((courseCode == null) ? 0 : courseCode.hashCode());
 		result = prime * result + ((courseName == null) ? 0 : courseName.hashCode());
-		result = prime * result + credits;
+		result = prime * result + ((credits == null) ? 0 : credits.hashCode());
 		return result;
 	}
-	/**
-	 * Generates equals based on hashcode
-	 */
+
 	@Override
-	public boolean equals(Object other) {
-		if(other == null)
-			return false;
-		return other.hashCode() == this.hashCode();
+	public boolean equals(Object obj) {
+		boolean result = false;
+		if (this == obj)
+			result = true;
+		if (obj == null)
+			result = false;
+		if (obj.hashCode() == this.hashCode())
+			result = true;
+		return result;
 	}
 }
 
