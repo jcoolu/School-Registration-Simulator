@@ -52,6 +52,7 @@ public class CourseDatabase {
 		scan.close();
 		return courseDB;
 	}
+	/*Used as a backup to try to see if this method worked*/
 	public ArrayList<Course> createArrayList2(String file) throws IOException {
         Scanner scan = new Scanner(new File(file));
 		scan.useDelimiter(",");
