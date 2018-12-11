@@ -15,77 +15,66 @@ import java.util.Scanner;
  * Uses singleton design pattern to instantiate object.
  * 
  * @author Kirby
+ * @author Jamie
  * 
  */
-
-public class CourseDatabase {
+ public class CourseDatabase {
 	
-	ArrayList<Course> courseDB;
-
-	public CourseDatabase(){
+	private static CourseDatabase db = new CourseDatabase();
+	private ArrayList<Course> courseDB;
+ 	private CourseDatabase(){
 		courseDB = new ArrayList<Course>();
 	}
 	
+	/**
+	 * getCourses --- Returns CourseDatabase (ArrayList of courses)
+	 * @return db
+	 */
+	public static CourseDatabase getCourses() {
+		return db;
+	}
 	/**
 	 * @param file The text file containaing the database
 	 * @return ArrayList containing data from .txt file
 	 * @throws FileNotFoundException
 	 */
 	public ArrayList<Course> createArrayList(String file) throws FileNotFoundException{
-//		ArrayList <String> list = new ArrayList<String>();
-//		Scanner s = new Scanner(new File(file));
-//		s.useDelimiter(",");
-//		while (s.hasNext()){list.add(s.next());}
 		
 		Scanner scan = new Scanner(new File(file));
 		scan.useDelimiter(",");
-		int i = 1;
+		
 		while(scan.hasNext()){
 			String name = scan.next();
 			String code = scan.next();
 			String credits = scan.next();
 			String capacity = scan.next();
-			courseDB.set(i, new Course(name, code, credits, capacity));
-			i++;
+			courseDB.add( new Course(name, code, credits, capacity));
 		}
-		//s.close();
+		
 		scan.close();
+		for(int i=0;i<courseDB.size();i++){
+			System.out.print(courseDB.get(i));}
 		return courseDB;
 	}
-	/*Used as a backup to try to see if this method worked*/
-	public ArrayList<Course> createArrayList2(String file) throws IOException {
-        Scanner scan = new Scanner(new File(file));
-		scan.useDelimiter(",");
-        ArrayList<Course> courseAL = new ArrayList<Course>();
-
-        while (scan.hasNextLine()) {
-            String name = scan.nextLine();
-            String code = scan.nextLine();
-            String cred = scan.next();
-            String cap = scan.next();
-            courseAL.add(new Course(name,code,cred,cap));
-        }
-        for (Course c : courseAL) {
-            System.out.println(c.toString());
-        }
-        scan.close();
-        return courseAL;
-    }
-
 	
 	/**
 	 * @param file The text file containing the database
 	 * @param courseDB The ArrayList containing data from .txt file originally
 	 * @throws IOException
 	 */
-	public void createFile(String file, ArrayList<Course> courseDB) throws IOException{
+	public void createFile(String file) throws IOException{
         FileWriter writer = new FileWriter(file);
         int size = courseDB.size();
+        
         for (int i=0;i<size;i++) {
+        	//if i is on last item, DON'T add "," after item
+            if(i == size-1){
+                writer.write(courseDB.get(i).toString());
+                break;
+            }
+            //writes each item into file
             String str = courseDB.get(i).toString() + ",";
             writer.write(str);
-//            if(i < size-1)	/*This prevent creating a blank like at the end of the file*/
-//                writer.write("\n");
         }
         writer.close();
     }

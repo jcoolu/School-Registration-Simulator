@@ -84,16 +84,16 @@ public class Course {
 	}
 	/**
 	 * @return string of course seperated by commas
+	 * ***last item (courseCapacity) should NOT have "," after***
 	 */
 	@Override
 	public String toString() {
 		return 	courseName 	+ "," + 
 				courseCode 	+ "," +
 				credits 	+ "," +
-				courseCapacity + "," + "\n";
+				courseCapacity + "\n";
 	}
-
-	@Override
+ 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -103,8 +103,7 @@ public class Course {
 		result = prime * result + ((credits == null) ? 0 : credits.hashCode());
 		return result;
 	}
-
-	@Override
+ 	@Override
 	public boolean equals(Object obj) {
 		boolean result = false;
 		if (this == obj)
@@ -116,4 +115,3 @@ public class Course {
 		return result;
 	}
 }
-
