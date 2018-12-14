@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
  * id, first name, last name, address, city, state, zip code, phone number,
  * major, minor, gpa, student photo. 
  * 
- * @author Jamie Coulombe
+ * @author Jamie
  *
  */
 
