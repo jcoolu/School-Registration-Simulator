@@ -1,4 +1,6 @@
 import java.awt.Image;
+import java.util.ArrayList;
+
 import javax.swing.ImageIcon;
 
 /**
@@ -25,6 +27,7 @@ public class Student {
 	private String minor; //Minor
 	private String gpa; //GPA 
 	private Image studentPhoto; //Student's Profile Picture
+	private ArrayList<String> schedule;
 
 	/**
 	 * Creates an empty Student object.
@@ -42,6 +45,7 @@ public class Student {
 		minor = "N/A";
 		gpa = "N/A";
 		studentPhoto = new ImageIcon("UnknownPicture.png").getImage();
+		schedule = new ArrayList<String>();
 	}
 
 	/**
@@ -60,7 +64,7 @@ public class Student {
 	 * @param image Student Profile Picture
 	 */
 	public Student(String studID, String fName, String lName, String street, String cit, String st, String zipcode,
-			String num, String maj, String min, String grade, String image) {
+			String num, String maj, String min, String grade, String image, ArrayList<String> courses) {
 		id = studID;
 		firstName = fName;
 		lastName = lName;
@@ -73,6 +77,7 @@ public class Student {
 		minor = min;
 		gpa = grade;
 		studentPhoto = new ImageIcon(image).getImage();
+		schedule = courses;
 	}
 	
 	public void setUsername(String user){
@@ -274,11 +279,44 @@ public class Student {
 	public void setStudentPhoto(Image studentPhoto) {
 		this.studentPhoto = studentPhoto;
 	}
-
+	
+	public void removeCourse(Course course) {
+		schedule.remove(course);
+	}
+	
+	public void removeCourseIndex(int i) {
+		schedule.remove(i);
+	}
+	
+	/**
+	 * Returns # of courses in student's schedule
+	 * @return schedule size
+	 */
+	public int getScheduleSize() {
+		return schedule.size();
+	}
+	
+	/**
+	 * Sets schedule of student
+	 * @param course Courses
+	 */
+	public void setSchedule(ArrayList<String> course) {
+		schedule = course;
+	}
+	
+	/**
+	 * returns Student's schedule
+	 * @return
+	 */
+	public ArrayList<String> getSchedule() {
+		return schedule;
+	}
+	
 	public String toString() {
 		return id + "," + firstName + "," + lastName + ","
 				+ address + "," + city + "," + state + "," + zip + "," + number
-				+ "," + major + "," + minor + "," + gpa + "," + studentPhoto;
+				+ "," + major + "," + minor + "," + gpa + "," + studentPhoto + "," +
+				schedule + "\n";
 	}
 
 }
