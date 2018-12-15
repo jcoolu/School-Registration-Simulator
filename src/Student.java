@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
  */
 
 public class Student {
+	private String username; //username
 	private String id; //Student ID #
 	private String firstName; //First Name
 	private String lastName; //Last Name
@@ -22,7 +23,7 @@ public class Student {
 	private String number; //Phone Number
 	private String major; //Major
 	private String minor; //Minor
-	private double gpa; //GPA 
+	private String gpa; //GPA 
 	private Image studentPhoto; //Student's Profile Picture
 
 	/**
@@ -39,7 +40,7 @@ public class Student {
 		number = "N/A";
 		major = "N/A";
 		minor = "N/A";
-		gpa = 0.0;
+		gpa = "N/A";
 		studentPhoto = new ImageIcon("UnknownPicture.png").getImage();
 	}
 
@@ -59,7 +60,7 @@ public class Student {
 	 * @param image Student Profile Picture
 	 */
 	public Student(String studID, String fName, String lName, String street, String cit, String st, String zipcode,
-			String num, String maj, String min, double grade, String image) {
+			String num, String maj, String min, String grade, String image) {
 		id = studID;
 		firstName = fName;
 		lastName = lName;
@@ -73,6 +74,15 @@ public class Student {
 		gpa = grade;
 		studentPhoto = new ImageIcon(image).getImage();
 	}
+	
+	public void setUsername(String user){
+		username = user;
+	}
+	
+	public String getUsername() {
+		return username;
+	}
+	
 	/**
 	 * Returns Student's ID
 	 * @return id
@@ -237,7 +247,7 @@ public class Student {
 	 * Returns Student's GPA
 	 * @return gpa
 	 */
-	public double getGpa() {
+	public String getGpa() {
 		return gpa;
 	}
 
@@ -245,7 +255,7 @@ public class Student {
 	 * Sets Student's gpa
 	 * @param gpa
 	 */
-	public void setGpa(double gpa) {
+	public void setGpa(String gpa) {
 		this.gpa = gpa;
 	}
 
@@ -266,9 +276,9 @@ public class Student {
 	}
 
 	public String toString() {
-		return "Student \nID: " + id + "\nFirst Name: " + firstName + "\nLast Name: " + lastName + "\nStreet Address: "
-				+ address + "\nCity: " + city + "\nState: " + state + "\nZip Code: " + zip + "\nPhone Number: " + number
-				+ "\nMajor" + major + "\nMinor: " + minor + "\nGPA: " + gpa + "\n Student Photo: " + studentPhoto;
+		return id + "," + firstName + "," + lastName + ","
+				+ address + "," + city + "," + state + "," + zip + "," + number
+				+ "," + major + "," + minor + "," + gpa + "," + studentPhoto;
 	}
 
 }
