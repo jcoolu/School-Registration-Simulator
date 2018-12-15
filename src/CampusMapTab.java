@@ -159,17 +159,16 @@ public class CampusMapTab extends JPanel {
 		// Whipple Hall
 		JButton whipple = new JButton();
 		CampusMapTab.addButton(whipple, 377, 240, "<b><u><font size=\"5\">Whipple Hall</b></u></font>"
-				+ "<br><br><font size = \"4\"><b>Whipple Hall 102</font></b><br>Lab Phone:"
-				+ "<br>(401) 456-9613");
+				+ "<br><br><font size = \"4\"><b>Whipple Hall 102</font></b><br>Lab Phone:" + "<br>(401) 456-9613");
 		add(whipple);
 
 		// Nazarian Center for the Performing Arts
 		JButton arts = new JButton();
 		CampusMapTab.addButton(arts, 385, 288,
 				"<b><u><font size=\"5\">Nazarian Center for the Performing Arts</b></u></font><br>"
-				+ "<br><font size =\"4\"><b>Contact Info: </font></b><br> (401) 456-8194<br>"
-				+ "(401) 456-8269 (fax)");
-		
+						+ "<br><font size =\"4\"><b>Contact Info: </font></b><br> (401) 456-8194<br>"
+						+ "(401) 456-8269 (fax)");
+
 		add(arts);
 
 		// Keefe Transportation Center
@@ -179,9 +178,8 @@ public class CampusMapTab extends JPanel {
 
 		// Roberts Hall
 		JButton roberts = new JButton();
-		CampusMapTab.addButton(roberts, 358, 327, "<b><u><font size=\"5\">Roberts Hall</b></u></font>"
-				+ " ");
-		
+		CampusMapTab.addButton(roberts, 358, 327, "<b><u><font size=\"5\">Roberts Hall</b></u></font>" + " ");
+
 		add(roberts);
 
 		// ALEX AND ANI Hall
@@ -214,9 +212,8 @@ public class CampusMapTab extends JPanel {
 		JButton henry = new JButton();
 		CampusMapTab.addButton(henry, 244, 350,
 				"<b><u><font size=\"5\">Henry Barnard Laboratory School</b></u></font><br>"
-				+ "<font size=\"4\"><b>Address: </b></font><br> 600 Mt. Pleasant Avenue"
-				+ "<br><font size=\"4\"><b>Telephone: </b></font>"
-				+ "<br>(401) 456-8127");
+						+ "<font size=\"4\"><b>Address: </b></font><br> 600 Mt. Pleasant Avenue"
+						+ "<br><font size=\"4\"><b>Telephone: </b></font>" + "<br>(401) 456-8127");
 		add(henry);
 
 		// Adams Library
@@ -231,19 +228,17 @@ public class CampusMapTab extends JPanel {
 
 		// Building 27 - Storage Building
 		JButton storage = new JButton();
-		CampusMapTab.addButton(storage, 56, 188,
-				"<b><u><font size=\"5\">Building 27 - Storage Building</b></u></font>"
-				+ "<br><br><b><font size=\"4\">Hours of Operation:</b></font>"
-				+ "<br>7:00a.m - 3:00p.m.");
+		CampusMapTab.addButton(storage, 56, 188, "<b><u><font size=\"5\">Building 27 - Storage Building</b></u></font>"
+				+ "<br><br><b><font size=\"4\">Hours of Operation:</b></font>" + "<br>7:00a.m - 3:00p.m.");
 		add(storage);
 
 		// Building 26 - Student - Athlete Success Center
 		JButton athlete = new JButton();
 		CampusMapTab.addButton(athlete, 83, 222,
 				"<b><u><font size=\"5\">Building 26 - Student - Athlete Success Center</b></u></font><br><br>"
-				+ "<b><font size=\"4\"> Hours: </b><br>Sunday: 3 - 7 p.m.<br>"
-				+ "Monday - Thursday: 10:00 a.m. - 8 p.m.<br>"
-				+ "Friday: By appointment only<br>Saturday: Closed");
+						+ "<b><font size=\"4\"> Hours: </b><br>Sunday: 3 - 7 p.m.<br>"
+						+ "Monday - Thursday: 10:00 a.m. - 8 p.m.<br>"
+						+ "Friday: By appointment only<br>Saturday: Closed");
 		add(athlete);
 
 		// Physical Plant Building - College Receiving
@@ -254,11 +249,11 @@ public class CampusMapTab extends JPanel {
 
 		// Building 30 - English Department/Offices
 		JButton english = new JButton();
-		CampusMapTab.addButton(english, 22, 293, "<b><u><font size=\"5\">English Department/Offices</b></u></font>"
-				+ "<br><br><b><font size=\"4\">Chair: </font></b><br>Daniel Scott<br><br>"
-				+ "<b><font size=\"4\">Assistant Chair:</b></font><br>Stephen Brown"
-				+ "<br><br><b><font size=\"4\">Contact Info: </b></font><br> "
-				+ "(401) 456-8028");
+		CampusMapTab.addButton(english, 22, 293,
+				"<b><u><font size=\"5\">English Department/Offices</b></u></font>"
+						+ "<br><br><b><font size=\"4\">Chair: </font></b><br>Daniel Scott<br><br>"
+						+ "<b><font size=\"4\">Assistant Chair:</b></font><br>Stephen Brown"
+						+ "<br><br><b><font size=\"4\">Contact Info: </b></font><br> " + "(401) 456-8028");
 		add(english);
 
 		// The Murray Center - Health, Physical Education, Athletics
@@ -269,27 +264,28 @@ public class CampusMapTab extends JPanel {
 
 		// Student Union
 		JButton union = new JButton();
-		CampusMapTab.addButton(union, 164, 311, "<b><u><font size=\"5\">Student Union</b></u></font>"
-				+ "<br><br><font size=\"4\"><b>Director:</font></b><br>Kristen K. Salemi<br>"
-				+ "<font size=\"4\"><b>Contact Info:</b></font><br>(401) 456-8034");
+		CampusMapTab.addButton(union, 164, 311,
+				"<b><u><font size=\"5\">Student Union</b></u></font>"
+						+ "<br><br><font size=\"4\"><b>Director:</font></b><br>Kristen K. Salemi<br>"
+						+ "<font size=\"4\"><b>Contact Info:</b></font><br>(401) 456-8034");
 		add(union);
 
 		// Donovan Dining Center
 		JButton donovan = new JButton();
-		CampusMapTab.addButton(donovan, 189, 330, "<b><u><font size=\"5\">Donovan Dining Center</b></u></font><br><br>"
-				+ "<font size=\"4\"><b>Hours of Operation: </b></font><br>"
-				+ "Mon-Fri 6:30AM-7:00PM<br>Sat-Sun Closed<br><br><font size=\"4\"><b>"
-				+ "Meal Zones</b></font><br>Mon-Fri<br>Breakfast: 6:30 AM - 10:30 AM<br>"
-				+ "Lunch: 10:31 AM - 3:30 PM<br>Dinner: 3:31 PM - 7:00 PM<br>"
-				+ "SAT-SUN<br>N / A");
+		CampusMapTab.addButton(donovan, 189, 330,
+				"<b><u><font size=\"5\">Donovan Dining Center</b></u></font><br><br>"
+						+ "<font size=\"4\"><b>Hours of Operation: </b></font><br>"
+						+ "Mon-Fri 6:30AM-7:00PM<br>Sat-Sun Closed<br><br><font size=\"4\"><b>"
+						+ "Meal Zones</b></font><br>Mon-Fri<br>Breakfast: 6:30 AM - 10:30 AM<br>"
+						+ "Lunch: 10:31 AM - 3:30 PM<br>Dinner: 3:31 PM - 7:00 PM<br>" + "SAT-SUN<br>N / A");
 		add(donovan);
 
 		// Faculty Center
 		JButton faculty = new JButton();
-		CampusMapTab.addButton(faculty, 209, 350, "<b><u><font size=\"5\">Faculty Center for Teaching and Learning</b></u></font>"
-				+ "<br><br><font size=\"4\"><b>Director: </b></font><br>Chris Marco<br><br><font size=\"4\"><b>"
-				+ "Contact Info: </b></font>cmarco@ric.edu<br>(401) 456-9984<br>"
-				+ "Email: fctl@ric.edu");
+		CampusMapTab.addButton(faculty, 209, 350,
+				"<b><u><font size=\"5\">Faculty Center for Teaching and Learning</b></u></font>"
+						+ "<br><br><font size=\"4\"><b>Director: </b></font><br>Chris Marco<br><br><font size=\"4\"><b>"
+						+ "Contact Info: </b></font>cmarco@ric.edu<br>(401) 456-9984<br>" + "Email: fctl@ric.edu");
 		add(faculty);
 
 		// Horace Mann Hall
@@ -299,12 +295,13 @@ public class CampusMapTab extends JPanel {
 
 		// Thorp Residence Hall
 		JButton thorp = new JButton();
-		CampusMapTab.addButton(thorp, 175, 489, "<b><u><font size=\"5\">Thorp Residence Hall</b></u></font>"
-				+ "<br><br>Thorp Hall is a co-educational upperclassmen hall designed<br>"
-				+ " in a suite style housing 144 students. Each suite offers eight<br>"
-				+ " single rooms off of a common living room area. Eight students share<br>"
-				+ " a bathroom with 2 sinks, 2 showers and 2 toilets. Each suite connects<br>"
-				+ " to a suite of the same sex through the bathroom.");
+		CampusMapTab.addButton(thorp, 175, 489,
+				"<b><u><font size=\"5\">Thorp Residence Hall</b></u></font>"
+						+ "<br><br>Thorp Hall is a co-educational upperclassmen hall designed<br>"
+						+ " in a suite style housing 144 students. Each suite offers eight<br>"
+						+ " single rooms off of a common living room area. Eight students share<br>"
+						+ " a bathroom with 2 sinks, 2 showers and 2 toilets. Each suite connects<br>"
+						+ " to a suite of the same sex through the bathroom.");
 		add(thorp);
 
 		// President's House
