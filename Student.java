@@ -27,7 +27,7 @@ public class Student {
 	private String minor; //Minor
 	private String gpa; //GPA 
 	private Image studentPhoto; //Student's Profile Picture
-	private ArrayList<String> schedule;
+	private ArrayList<Course> schedule;
 
 	/**
 	 * Creates an empty Student object.
@@ -45,7 +45,7 @@ public class Student {
 		minor = "N/A";
 		gpa = "N/A";
 		studentPhoto = new ImageIcon("UnknownPicture.png").getImage();
-		schedule = new ArrayList<String>();
+		schedule = new ArrayList<Course>();
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class Student {
 	 * @param image Student Profile Picture
 	 */
 	public Student(String studID, String fName, String lName, String street, String cit, String st, String zipcode,
-			String num, String maj, String min, String grade, String image, ArrayList<String> courses) {
+			String num, String maj, String min, String grade, String image, ArrayList<Course> courses) {
 		id = studID;
 		firstName = fName;
 		lastName = lName;
@@ -308,7 +308,7 @@ public class Student {
 	 * returns Student's schedule
 	 * @return
 	 */
-	public ArrayList<String> getSchedule() {
+	public ArrayList<Course> getSchedule() {
 		return schedule;
 	}
 	
