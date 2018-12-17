@@ -1,6 +1,6 @@
-0000,Mamethierno,Gadiaga,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,3.89,sun.awt.image.ToolkitImage@568db2f2,2,CSCI 211,Computer Programming and Design,4,35,CSCI 212,Data Structures,4, 22,
-0001,Jamie, Coulombe,65 yles ave,pawtucket,ri,02860,4015897862,Computer Science,Mathematics,3.89,jcoulombe_0001.png,0,
-0002,Oliver Feliz,Lima,4 yles avenue,providence,ri,02860,4017194562,Computer Science,Music,3.89,sun.awt.image.ToolkitImage@5fd0d5ae,0,
-0003,Kirby,Fosberg,24 dangerous avenue,Woonsocket,ri,02860,4015896523,Computer Science,Art,3.89,sun.awt.image.ToolkitImage@2d98a335,0,
-0004,Gaetano,Castigliego,24 crazy avenue,Fall river,ri,02860,4018884562,Computer Science,Biology,3.89,sun.awt.image.ToolkitImage@16b98e56,0,
-0005,Ellis,Garcia,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,3.89,sun.awt.image.ToolkitImage@7ef20235,0
+0000,Mamethierno,Gadiaga,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,3.89,sun.awt.image.ToolkitImage@568db2f2,2,[CSCI 211,Computer Programming and Design,4,35,  CSCI 212,Data Structures,4, 22],
+0001,Jamie, Coulombe,555 Abigail Avenue,Pawtucket,RI,02860,4015897862,Computer Science,Mathematics,3.89,jcoulombe_0001.png,2,[CSCI 211,Computer Programming and Design,4,35,  CSCI 212,Data Structures,4, 22],
+0002,Oliver Feliz,Lima,4 yles avenue,providence,ri,02860,4017194562,Computer Science,Music,3.89,sun.awt.image.ToolkitImage@5fd0d5ae,3,[CSCI 211,Computer Programming and Design,4,35, CSCI 212,Data Structures,4, 22, CSCI 312,Computer Organization and Architecture I,4,33],
+0003,Kirby,Fosberg,24 dangerous avenue,Woonsocket,ri,02860,4015896523,Computer Science,Art,3.89,sun.awt.image.ToolkitImage@2d98a335,2,[CSCI 313,Computer Organization and Architecture II,4,20, CSCI 325,Organization of Programming Language,4,50],
+0004,Gaetano,Castigliego,24 crazy avenue,Fall river,ri,02860,4018884562,Computer Science,Biology,3.89,sun.awt.image.ToolkitImage@16b98e56,2,[CSCI 211,Computer Programming and Design,4,35,  CSCI 212,Data Structures,4, 22],
+0005,Ellis,Garcia,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,3.89,sun.awt.image.ToolkitImage@7ef20235,1,[CSCI 476,Advanced Topics in Computer Science,4,100]
