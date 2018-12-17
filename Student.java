@@ -14,7 +14,6 @@ import javax.swing.ImageIcon;
  */
 
 public class Student {
-	private String username; //username
 	private String id; //Student ID #
 	private String firstName; //First Name
 	private String lastName; //Last Name
@@ -26,8 +25,9 @@ public class Student {
 	private String major; //Major
 	private String minor; //Minor
 	private String gpa; //GPA 
-	private Image studentPhoto; //Student's Profile Picture
+	private String studentPhoto; //Student's Profile Picture
 	private ArrayList<Course> schedule;
+	private String numberOfCourses;
 
 	/**
 	 * Creates an empty Student object.
@@ -44,8 +44,9 @@ public class Student {
 		major = "N/A";
 		minor = "N/A";
 		gpa = "N/A";
-		studentPhoto = new ImageIcon("UnknownPicture.png").getImage();
+		studentPhoto = "UnknownPicture.png";
 		schedule = new ArrayList<Course>();
+		numberOfCourses = "0";
 	}
 
 	/**
@@ -64,7 +65,7 @@ public class Student {
 	 * @param image Student Profile Picture
 	 */
 	public Student(String studID, String fName, String lName, String street, String cit, String st, String zipcode,
-			String num, String maj, String min, String grade, String image, ArrayList<Course> courses) {
+			String num, String maj, String min, String grade, String image, String numOfCourses, ArrayList<Course> courses) {
 		id = studID;
 		firstName = fName;
 		lastName = lName;
@@ -76,18 +77,11 @@ public class Student {
 		major = maj;
 		minor = min;
 		gpa = grade;
-		studentPhoto = new ImageIcon(image).getImage();
+		studentPhoto = image;
 		schedule = courses;
+		numberOfCourses = numOfCourses;
 	}
-	
-	public void setUsername(String user){
-		username = user;
-	}
-	
-	public String getUsername() {
-		return username;
-	}
-	
+
 	/**
 	 * Returns Student's ID
 	 * @return id
@@ -268,7 +262,7 @@ public class Student {
 	 * Returns Student's photo
 	 * @return studentPhoto
 	 */
-	public Image getStudentPhoto() {
+	public String getStudentPhoto() {
 		return studentPhoto;
 	}
 
@@ -276,31 +270,31 @@ public class Student {
 	 * Sets Student's Photo
 	 * @param studentPhoto Student's Photo
 	 */
-	public void setStudentPhoto(Image studentPhoto) {
+	public void setStudentPhoto(String studentPhoto) {
 		this.studentPhoto = studentPhoto;
 	}
 	
-	public void removeCourse(Course course) {
+/*	public void removeCourse(Course course) {
 		schedule.remove(course);
 	}
 	
 	public void removeCourseIndex(int i) {
 		schedule.remove(i);
 	}
-	
-	/**
+	*/
+/*	*//**
 	 * Returns # of courses in student's schedule
 	 * @return schedule size
-	 */
+	 *//*
 	public int getScheduleSize() {
 		return schedule.size();
-	}
+	}*/
 	
 	/**
 	 * Sets schedule of student
 	 * @param course Courses
 	 */
-	public void setSchedule(ArrayList<String> course) {
+	public void setSchedule(ArrayList<Course> course) {
 		schedule = course;
 	}
 	
@@ -316,7 +310,7 @@ public class Student {
 		return id + "," + firstName + "," + lastName + ","
 				+ address + "," + city + "," + state + "," + zip + "," + number
 				+ "," + major + "," + minor + "," + gpa + "," + studentPhoto + "," +
-				schedule + "\n";
+				schedule;
 	}
 
 }
