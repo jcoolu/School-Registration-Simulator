@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class studentDb here.
+ * 
  * This class controls a database of student objects
  * It is responsible for creating an Arraylist from 
  * a text file containing the data of Student objects
@@ -12,15 +12,11 @@
  * @version (v1)
  */
 
-import java.io.File;
+import java.io.File; 
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
-import java.awt.Image;
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
 
 public class StudentDatabase 
 {
@@ -31,7 +27,7 @@ public class StudentDatabase
     
     private StudentDatabase() 
     {
-        // initialise instance variables
+        // Initialize instance variables
         studentDB = new ArrayList<Student>();
     }
     
@@ -45,6 +41,14 @@ public class StudentDatabase
         return dataBase;
     }
     
+    public static ArrayList<Course> getCourses() {
+    	return courses;
+    }
+    
+    public Course getCourse(int i ){
+    	return courses.get(i);
+    }
+    
     public  Student getStudent(int i) {
     	return studentDB.get(i);
     }
@@ -53,7 +57,7 @@ public class StudentDatabase
     	return studentDB.size();
     }
     /**
-	 * @param file The text file containaing the database
+	 * @param file The text file containing the database
 	 * @return ArrayList containing data from .txt file
 	 * @throws FileNotFoundException
 	 */
@@ -80,7 +84,7 @@ public class StudentDatabase
             String studentPhoto = scan.next();
             String numberCourse = scan.next();
             courses = new ArrayList<Course>();
-       
+            
             for(int i = 0;i < Integer.parseInt(numberCourse); i++){
             	courses.add(new Course(scan.next(),scan.next(),scan.next(),scan.next()));
             }
