@@ -5,9 +5,10 @@ import javax.swing.*;
  * CampusMapTab -- Displays CampusMapRIC.png and allows user to hover over
  * buttons, which display the corresponding building info.
  * 
- * @author JMCoo
+ * @author Jamie
  *
  */
+@SuppressWarnings("serial")
 public class CampusMapTab extends JPanel {
 	private String[] buildings = { "Adams Library", "ALEX AND ANI HALLL", "Alger Hall", "Art Center",
 			"Browne Residence Hall", "Building 1 - Information Services", "Building 2 - Offices",
@@ -56,7 +57,7 @@ public class CampusMapTab extends JPanel {
 		CampusMapTab.addButton(kauffman, 579, 291,
 				"<b><u><font size=\"5\">Building 10 - " + "Joseph F. Kauffman Center</b></u></font>"
 						+ "<br><br>Building 10 is today named the Joseph F. Kauffman Center, after <br>"
-						+ "the College’s fourth president.  Recognized as one of the country’s most <br>"
+						+ "the Collegeâ€™s fourth president.  Recognized as one of the countryâ€™s most <br>"
 						+ "respected experts on leadership in higher education, Kauffman served as the<br>"
 						+ " Assistant to the President at Brandeis University before being appointed<br>"
 						+ " President of Rhode Island College in 1968.");
@@ -75,7 +76,7 @@ public class CampusMapTab extends JPanel {
 						+ "<br><b><font size=\"4\">Fax:</b></font> 1-401-456-8817<br><b><br><font size=\"4\">Email:</font></b> admissions@ric.edu or transfer@ric.edu<br><b><br"
 						+ "<font size=\"4\">>Mailing Address:</font></b> "
 						+ "<br>Office of Undergraduate Admissions<br>The Forman Center<br>Rhode Island College<br>Providence, RI 02908-1991	"
-						+ "<br><br><b><font size=\"4\">Office Hours:</font></b>Academic Year: Monday – Friday, 8:30am – 4:30pm<br>Summer: Monday – Friday, 8:00am – 4;00pm");
+						+ "<br><br><b><font size=\"4\">Office Hours:</font></b>Academic Year: Monday â€“ Friday, 8:30am â€“ 4:30pm<br>Summer: Monday â€“ Friday, 8:00am â€“ 4;00pm");
 		add(forman);
 
 		// Yellow Cottage
@@ -89,8 +90,8 @@ public class CampusMapTab extends JPanel {
 		JButton recreation = new JButton();
 		CampusMapTab.addButton(recreation, 520, 90, "<b><u><font size=\"5\">Recreation Center</b></u></font><br><br><b>"
 				+ "August 25, 2018 - December 21, 2018 <font size=\"4\">Building Hours</font></b><br>Monday - Thursday     6:00 a.m. - 11:00 p.m.<br>Friday"
-				+ "                       6:00 a.m. – 6:00 p.m.<br>Saturday                   10:00 a.m. – 2:00 p.m."
-				+ "<br>Sunday                     4:00 p.m. – 10:00 p.m.<br><br>"
+				+ "                       6:00 a.m. â€“ 6:00 p.m.<br>Saturday                   10:00 a.m. â€“ 2:00 p.m."
+				+ "<br>Sunday                     4:00 p.m. â€“ 10:00 p.m.<br><br>"
 				+ "Individual areas within the Recreational Center have"
 				+ "<br> different operational schedules, <br>please check below for the specific hours.<br>"
 				+ "Activities will cease 30 minutes prior to the closing time "
@@ -164,7 +165,7 @@ public class CampusMapTab extends JPanel {
 						+ "Carol Shields<br><br><font size=\"4\"><b>Contact Info:</b>"
 						+ "</font><br>(401) 456-8154<br>cshields1@ric.edu<br><br>***"
 						+ "The co-op is open Monday through Friday from 7:45 a.m.<br>"
-						+ " to 5 p.m. Use of the co-op’s facilities is limited to those<br>"
+						+ " to 5 p.m. Use of the co-opâ€™s facilities is limited to those<br>"
 						+ " hours during which the parent is in class or fulfilling a class<br>"
 						+ " obligation. The co-op follows the same academic calendar as the college.");
 		add(preschool);
@@ -226,12 +227,15 @@ public class CampusMapTab extends JPanel {
 		CampusMapTab.addButton(henry, 244, 350,
 				"<b><u><font size=\"5\">Henry Barnard Laboratory School</b></u></font><br>"
 						+ "<font size=\"4\"><b>Address: </b></font><br> 600 Mt. Pleasant Avenue"
-						+ "<br><font size=\"4\"><b>Telephone: </b></font>" + "<br>(401) 456-8127");
+						+ "<br><font size=\"4\"><b>Telephone: </b></font><br>(401) 456-8127");
 		add(henry);
 
 		// Adams Library
 		JButton library = new JButton();
-		CampusMapTab.addButton(library, 205, 214, "<b><u><font size=\"5\">Adams Library</b></u></font>");
+		CampusMapTab.addButton(library, 205, 214,
+				"<b><u><font size=\"5\">Adams Library</b></u></font><br>"
+						+ "<br><font size=\"4\"><b>Hours of Operation: </b></font><br>7:00AM - 10:00PM<br>"
+						+ "<br><font size=\"4\"><b>Telephone: 401-456-8126</b></font>");
 		add(library);
 
 		// Gaige Hall
@@ -321,7 +325,7 @@ public class CampusMapTab extends JPanel {
 		JButton president = new JButton();
 		CampusMapTab.addButton(president, 62, 469,
 				"<b><u><font size=\"5\">President's House</b></u></font><br><br>"
-						+ "President<br>Frank Sánchez<br>President@ric.edu<br><br><b><font size=\"4\">Contact Info: </b><br></font>"
+						+ "President<br>Frank SÃ¡nchez<br>President@ric.edu<br><br><b><font size=\"4\">Contact Info: </b><br></font>"
 						+ "(401) 456-8100<br>(401) 456-8287 (fax)<br><br><b><font size=\"4\">Address:</font></b>"
 						+ "<br>255 Fruit Hill Ave,<br>North Providence, <br>RI 02911");
 		add(president);
@@ -376,7 +380,43 @@ public class CampusMapTab extends JPanel {
 				+ "<br><br>Willard Hall is a co-educational <br>freshmen hall designed in a suite<br> style housing 140 students. "
 				+ "Each suite, containing single<br> and double rooms, is accessible from an<br> outside courtyard area. Each pair "
 				+ "<br>of single and double rooms share a common bathroom" + "<br> with a shower, sink and toilet.");
+		willard.setForeground(Color.YELLOW);
 		add(willard);
+
+		//Instructions on how to use Campus Map
+		JTextArea instructions = new JTextArea("How to Use Campus Map:\n\nSimply hover cursor over\n"
+				+ "red dot to show information\n about the specific building.");
+		instructions.setEditable(false);
+		add(instructions);
+
+		// Font for instructions
+		Font font = new Font("Palatino Linotype", Font.BOLD, 25);
+		instructions.setFont(font);
+
+		// sets size of JTextArea
+		Dimension size = instructions.getPreferredSize();
+		instructions.setBounds(800, 20, size.width + 100, size.height + 100);
+
+		// sets color of font
+		instructions.setForeground(Color.RED);
+		instructions.setOpaque(false);
+
+		//Title for List of Buildings:
+		JTextArea buildingtext = new JTextArea("List of Buildings:");
+		Font titleBuilding = new Font("Palatino Linotype", Font.PLAIN, 20);//creates font
+		buildingtext.setFont(titleBuilding);
+		buildingtext.setBounds(800, 265, size.width, size.height - 130);
+		buildingtext.setOpaque(false);
+		buildingtext.setEditable(false);
+		add(buildingtext);
+
+		//creates scrollPane for list of buildings
+		JList<String> list = new JList<String>(buildings);
+		list.setVisibleRowCount(1);
+		list.setFont(titleBuilding);
+		JScrollPane scroller = new JScrollPane(list);
+		scroller.setBounds(800, 300, size.width + 100, size.height + 100);
+		add(scroller);
 	}
 
 	/**
