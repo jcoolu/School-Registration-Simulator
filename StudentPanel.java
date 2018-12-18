@@ -1,8 +1,6 @@
-import java.awt.FlowLayout;
-
-import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 
+@SuppressWarnings("serial")
 public class StudentPanel extends JTabbedPane
 {
 	public StudentPanel ()
