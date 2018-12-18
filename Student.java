@@ -1,13 +1,11 @@
-import java.awt.Image;
 import java.util.ArrayList;
-
-import javax.swing.ImageIcon;
 
 /**
  * Class -- Student
  * This class creates a student object that has the following information:
- * id, first name, last name, address, city, state, zip code, phone number,
- * major, minor, gpa, student photo. 
+ * id, first name, last name, address, city, state, zipcode, phone number,
+ * major, minor, GPA, student photo, number of courses they have, and 
+ * an ArrayList of their schedule (courses). 
  * 
  * @author Jamie
  *
@@ -28,6 +26,14 @@ public class Student {
 	private String studentPhoto; //Student's Profile Picture
 	private ArrayList<Course> schedule;
 	private String numberOfCourses;
+
+	public String getNumberOfCourses() {
+		return numberOfCourses;
+	}
+
+	public void setNumberOfCourses(String numberOfCourses) {
+		this.numberOfCourses = numberOfCourses;
+	}
 
 	/**
 	 * Creates an empty Student object.
@@ -50,6 +56,7 @@ public class Student {
 	}
 
 	/**
+	 * Creates a Student Object with specified parameters.
 	 * 
 	 * @param studID Student ID #
 	 * @param fName First Name
@@ -63,6 +70,8 @@ public class Student {
 	 * @param min Minor 
 	 * @param grade Grade Point Average (GPA)
 	 * @param image Student Profile Picture
+	 * @param numOfCourses numberOfCourses (# of courses a student has)
+	 * @param courses schedule of User
 	 */
 	public Student(String studID, String fName, String lName, String street, String cit, String st, String zipcode,
 			String num, String maj, String min, String grade, String image, String numOfCourses, ArrayList<Course> courses) {
@@ -274,14 +283,7 @@ public class Student {
 		this.studentPhoto = studentPhoto;
 	}
 	
-/*	public void removeCourse(Course course) {
-		schedule.remove(course);
-	}
-	
-	public void removeCourseIndex(int i) {
-		schedule.remove(i);
-	}
-	*/
+
 /*	*//**
 	 * Returns # of courses in student's schedule
 	 * @return schedule size
@@ -306,11 +308,49 @@ public class Student {
 		return schedule;
 	}
 	
+	/**
+	 * Returns course size.
+	 * @return schedule size
+	 */
+	public int getScheduleSize() {
+		return schedule.size();
+	}
+	
+	/**
+	 * Removes course at specified index
+	 * @param i
+	 */
+	public void removeCourseIndex(int i ){
+		schedule.remove(i);
+	}
+	
+	/**
+	 * Returns list of courses a student has.
+	 * @return schedule content
+	 */
+	public String getScheduleToString()
+	{
+		String result = "";
+		for(int i = 0; i < schedule.size();i++){
+			result+= (schedule.get(i)+"\n");
+		}
+		return result;
+	}
+	
+	/**
+	 * Sets number of courses a student has
+	 * @param i numberOfCourses
+	 */
+	public void setnumberOfCourses(String i){
+		numberOfCourses = i;
+	}
+	
 	public String toString() {
 		return id + "," + firstName + "," + lastName + ","
 				+ address + "," + city + "," + state + "," + zip + "," + number
-				+ "," + major + "," + minor + "," + gpa + "," + studentPhoto + "," +
-				schedule;
+				+ "," + major + "," + minor + "," + gpa + "," + studentPhoto + ","
+				+ numberOfCourses + "," 
+				+ schedule.toString().replace("[", "").replace("]", "");
 	}
 
 }
