@@ -1,0 +1,6 @@
+0000, CSCI 211 Computer Programming and Design, CSCI 476 Advanced Topics in Computer Science, CSCI 455 Introduction to Database Systems, CSCI 422 Introduction to Computation Theory
+0001, CSCI 435 Operating Systems and Computer Architecture, CSCI 437 Network Architectures and Programming
+0002, CSCI 211 Computer Programming and Design, CSCI 476 Advanced Topics in Computer Science, CSCI 455 Introduction to Database Systems, CSCI 422 Introduction to Computation Theory
+0004, CSCI 211 Computer Programming and Design, CSCI 476 Advanced Topics in Computer Science, CSCI 455 Introduction to Database Systems, CSCI 422 Introduction to Computation Theory
+0005, CSCI 211 Computer Programming and Design, CSCI 476 Advanced Topics in Computer Science, CSCI 455 Introduction to Database Systems, CSCI 422 Introduction to Computation Theory
+0006, CSCI 211 Computer Programming and Design, CSCI 476 Advanced Topics in Computer Science, CSCI 455 Introduction to Database Systems, CSCI 422 Introduction to Computation Theory
