@@ -1,4 +1,4 @@
-import java.awt.Color;
+import java.awt.Color; 
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
@@ -10,8 +10,6 @@ import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -29,6 +27,7 @@ import javax.swing.JTextField;
  * @author Mamethierno Gadiaga
  *
  */
+@SuppressWarnings("serial")
 public class LoginPanel extends JPanel implements ComponentListener
 {
 	// Defining the instance variables of the LoginPanel class
@@ -139,6 +138,7 @@ public class LoginPanel extends JPanel implements ComponentListener
 
 		loginBtn.addActionListener(new ActionListener()
 		{
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				int counter = 0;
