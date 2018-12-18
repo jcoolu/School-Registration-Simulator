@@ -1,16 +1,13 @@
-import java.awt.Dimension;
-import java.util.Scanner;
-
+import java.awt.Dimension; 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 public class Driver 
 {
 	private static JFrame w;
 	public static void main(String[] args) 
 	{
-		StudentDatabase myStudentDB = StudentDatabase.getStudents();
-		CourseDatabase myCourseDB = CourseDatabase.getCourses();
+		//StudentDatabase myStudentDB = StudentDatabase.getStudents();
+		//CourseDatabase myCourseDB = CourseDatabase.getCourses();
 		w = new JFrame();
 		w.setTitle("Login");
 		w.setMinimumSize(new Dimension (500, 350));
