@@ -1,16 +1,19 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 
 import javax.swing.BorderFactory;
-import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
@@ -21,27 +24,27 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 	private JPanel imagePanel;
 	private JPanel rightPanel;
 	private JLabel fnameLbl;
-	private JTextField fnameTxt;
+	public static JTextField fnameTxt;
 	private JLabel lnameLbl;
-	private JTextField lnameTxt;
+	public static JTextField lnameTxt;
 	private JLabel streetAddressLbl;
-	private JTextField streetAddressTxt;
+	public static JTextField streetAddressTxt;
 	private JLabel cityLbl;
-	private JTextField cityTxt;
+	public static JTextField cityTxt;
 	private JLabel stateLbl;
-	private JTextField stateTxt;
+	public static JTextField stateTxt;
 	private JLabel zipcodeLbl;
-	private JTextField zipcodeTxt;
+	public static JTextField zipcodeTxt;
 	private JLabel phoneLbl;
-	private JTextField phoneTxt;
+	public static JTextField phoneTxt;
 	private JLabel majorLbl;
-	private JTextField majorTxt;
+	public static JTextField majorTxt;
 	private JLabel minorLbl;
-	private JTextField minorTxt;
+	public static JTextField minorTxt;
 	private JLabel gpaLbl;
-	private JTextField gpaTxt;
+	public static JTextField gpaTxt;
 	private JLabel totalCreditsLbl;
-	private JTextField totalCreditsTxt;
+	public static JTextField totalCreditsTxt;
 	private JLabel studentImageLbl;
 	private JButton previousBtn;
 	private JButton nextBtn;
@@ -50,6 +53,9 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 	private JButton deleteBtn;
 	private JButton clearBtn;
 	private JList<String> studentList;
+	
+	private StudentDatabase db = new StudentDatabase();
+	private int currentIndex = 0;
 	
 
 
@@ -73,7 +79,13 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 		minorLbl = new JLabel("Minor:                    ");
 		gpaLbl = new JLabel("GPA:                       ");
 		totalCreditsLbl = new JLabel("Total Credits:       ");
-		studentImageLbl = new JLabel(new ImageIcon(""));
+		
+		studentImageLbl = new JLabel();
+		ImageIcon stdImage = new ImageIcon("0000.jpg");
+		Image img = stdImage.getImage();
+		Image newImg = img.getScaledInstance(450, 310, Image.SCALE_DEFAULT);
+		ImageIcon image = new ImageIcon(newImg);
+		studentImageLbl.setIcon(image);
 
 		// Creating the text fields and combo box of the AdminStudentTab
 		fnameTxt = new JTextField(25);
@@ -88,6 +100,18 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 		gpaTxt = new JTextField(25);
 		totalCreditsTxt = new JTextField(25);
 		
+		fnameTxt.setText(db.getStudentList().get(0).getFirstName());
+		lnameTxt.setText(db.getStudentList().get(0).getLastName());
+		streetAddressTxt.setText(db.getStudentList().get(0).getAddress());
+		cityTxt.setText(db.getStudentList().get(0).getCity());
+		stateTxt.setText(db.getStudentList().get(0).getState());
+		zipcodeTxt.setText(db.getStudentList().get(0).getZip());
+		phoneTxt.setText(db.getStudentList().get(0).getNumber());
+		majorTxt.setText(db.getStudentList().get(0).getMajor());
+		minorTxt.setText(db.getStudentList().get(0).getMinor());
+		gpaTxt.setText(db.getStudentList().get(0).getGpa());
+		totalCreditsTxt.setText(db.getStudentList().get(0).getTotalCredits());
+		
 		// creating all the button
 		previousBtn = new JButton("<PREVIOUS");
 		nextBtn = new JButton("NEXT>");
@@ -96,34 +120,53 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 		deleteBtn = new JButton ("DELETE");
 		clearBtn = new JButton ("CLEAR");
 		
-		String week[]= { "Monday","Tuesday","Wednesday", 
-                "Thursday","Friday","Saturday","Sunday",
-                "Monday","Tuesday","Wednesday", 
-                "Thursday","Friday","Saturday","Sunday",
-                "Monday","Tuesday","Wednesday", 
-                "Thursday","Friday","Saturday","Sunday",
-                "Monday","Tuesday","Wednesday", 
-                "Thursday","Friday","Saturday","Sunday",
-                "Monday","Tuesday","Wednesday", 
-                "Thursday","Friday","Saturday","Sunday"}; 
+		
+		String fnameAndID[] = new String[db.getStudentList().size()];
+		
+		for (int i = 0; i < db.getStudentList().size(); i++)
+		{
+			fnameAndID[i] = db.getStudentList().get(i).getFirstName() + db.getStudentList().get(i).getLastName() + " / ID => " +
+					db.getStudentList().get(i).getId();	
+		}
 		
 		// creating the JList
-		//DefaultListModel dlm = new DefaultListModel();
-		studentList = new JList<String>(week);
-		
-		
+		studentList = new JList<String>(fnameAndID);
 
 		// creating the image panel
 		imagePanel = new JPanel(); 
 		imagePanel.setBorder(BorderFactory.createRaisedBevelBorder());
 		imagePanel.setLayout(new BorderLayout());
-		imagePanel.add(studentImageLbl);
 		imagePanel.add(studentImageLbl, BorderLayout.CENTER);
+		JPanel southPanel = new JPanel();
+		southPanel.setBorder(BorderFactory.createRaisedBevelBorder());
+		JLabel findLbl = new JLabel("Find student by ID: ");
+		JTextField searchTxt = new JTextField(10);
+		JButton findBtn = new JButton ("Find");
+		southPanel.add(findLbl);
+		southPanel.add(searchTxt);
+		southPanel.add(findBtn);
+		imagePanel.add(southPanel, BorderLayout.SOUTH);
+		JLabel IdLbl = new JLabel("ID => ");
+		JTextField IdTxt = new JTextField(5);
+		IdTxt.setEditable(false);
+		IdTxt.setText(db.getStudentList().get(0).getId());
+		JPanel northPanel = new JPanel ();
+		northPanel.setBorder(BorderFactory.createRaisedBevelBorder());
+		northPanel.add(IdLbl);
+		northPanel.add(IdTxt);
+		imagePanel.add(northPanel, BorderLayout.NORTH);
+		
+		JPanel centerPanel = new JPanel();
+		centerPanel.setBackground(Color.BLACK);
+		centerPanel.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2, true));
+		centerPanel.add(studentImageLbl);
+		imagePanel.add(centerPanel, BorderLayout.CENTER);
+		
 		
 		// left panel
 		leftPanel = new JPanel();
 		leftPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLoweredBevelBorder(), "Student Info"));
-		leftPanel.setLayout(new GridLayout(13, 1, 0, -5));
+		leftPanel.setLayout(new GridLayout(11, 1, 0, -5));
 		
 		// right panel
 		rightPanel = new JPanel();
@@ -142,8 +185,8 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 		JPanel panel9 = new JPanel();
 		JPanel panel10 = new JPanel();
 		JPanel panel11 = new JPanel();
-		JPanel panel12 = new JPanel();
-		JPanel panel13 = new JPanel();
+		//JPanel panel12 = new JPanel();
+		//JPanel panel13 = new JPanel();
 
 		// Setting the layout of the panel
 		panel1.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -156,9 +199,9 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 		panel8.setLayout(new FlowLayout(FlowLayout.LEFT));
 		panel9.setLayout(new FlowLayout(FlowLayout.LEFT));
 		panel10.setLayout(new FlowLayout(FlowLayout.LEFT));
-		panel11.setLayout(new FlowLayout(FlowLayout.LEFT));
-		panel12.setLayout(new FlowLayout(FlowLayout.LEFT));
-		panel13.setLayout(new FlowLayout(FlowLayout.LEFT));
+		//panel11.setLayout(new FlowLayout(FlowLayout.LEFT));
+		//panel12.setLayout(new FlowLayout(FlowLayout.LEFT));
+		//panel13.setLayout(new FlowLayout(FlowLayout.LEFT));
 
 		panel1.add(fnameLbl);
 		panel1.add(fnameTxt);
@@ -182,11 +225,11 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 		panel8.add(totalCreditsTxt);
 		panel9.add(gpaLbl);
 		panel9.add(gpaTxt);
-		panel11.add(previousBtn);
-		panel11.add(nextBtn);
-		panel11.add(newRecordBtn);
-		panel11.add(saveBtn);
-		panel11.add(deleteBtn);
+		panel10.add(previousBtn);
+		panel10.add(nextBtn);
+		panel10.add(newRecordBtn);
+		panel10.add(saveBtn);
+		panel10.add(deleteBtn);
 		panel11.add(clearBtn);
 
 
@@ -200,9 +243,10 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 		leftPanel.add(panel8);
 		leftPanel.add(panel9);
 		leftPanel.add(panel10);
+		leftPanel.add(panel10);
 		leftPanel.add(panel11);
-		leftPanel.add(panel12);
-		leftPanel.add(panel13);
+		//leftPanel.add(panel12);
+		//leftPanel.add(panel13);
 
 
         rightPanel.add(new JScrollPane(studentList));
@@ -211,19 +255,67 @@ public class AdminStudentTab extends JPanel implements ComponentListener
 		this.add(leftPanel);
 		this.add(imagePanel);
 		this.add(rightPanel);
+		
+		clearBtn.addActionListener(new ActionListener()
+		{
+
+			public void actionPerformed(ActionEvent arg0)
+			{
+				fnameTxt.setText("");
+				lnameTxt.setText("");
+				streetAddressTxt.setText("");
+				cityTxt.setText("");
+				stateTxt.setText("");
+				zipcodeTxt.setText("");
+				phoneTxt.setText("");
+				majorTxt.setText("");
+				minorTxt.setText("");
+				totalCreditsTxt.setText("");
+				gpaTxt.setText("");
+			}
+		});
+		
+		// Test purpose
+		System.out.println(db.getStudentList().indexOf(db.getStudentList().get(Integer.parseInt(IdTxt.getText()))));
+		
+		
+		 
+		nextBtn.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent arg0)
+			{
+				
+				if (currentIndex == db.getStudentList().size() - 1)
+				{
+					currentIndex = 0;
+				}
+				else 
+				{
+					currentIndex = db.getStudentList().indexOf(db.getStudentList().get(Integer.parseInt(IdTxt.getText())));
+				}
+				
+				
+					
+				fnameTxt.setText(db.getStudentList().get(currentIndex + 1).getFirstName());
+				lnameTxt.setText(db.getStudentList().get(currentIndex + 1).getLastName());
+				streetAddressTxt.setText(db.getStudentList().get(currentIndex + 1).getAddress());
+				cityTxt.setText(db.getStudentList().get(currentIndex + 1).getCity());
+				stateTxt.setText(db.getStudentList().get(currentIndex + 1).getState());
+				zipcodeTxt.setText(db.getStudentList().get(currentIndex + 1).getZip());
+				phoneTxt.setText(db.getStudentList().get(currentIndex + 1).getNumber());
+				majorTxt.setText(db.getStudentList().get(currentIndex + 1).getMajor());
+				minorTxt.setText(db.getStudentList().get(currentIndex + 1).getMinor());
+				gpaTxt.setText(db.getStudentList().get(currentIndex + 1).getGpa());
+				totalCreditsTxt.setText(db.getStudentList().get(currentIndex + 1).getTotalCredits());
+				IdTxt.setText(db.getStudentList().get(currentIndex + 1).getId());
+				studentImageLbl.setIcon(new ImageIcon(db.getStudentList().get(currentIndex + 1).getStudentPhoto()));
+			
+			}
+		});
+		
+		
 	}
-
-	public static void main(String[] args) 
-	{
-		JFrame frame = new JFrame ("Student Panel");
-		frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-		frame.pack();
-
-		frame.getContentPane().add(new AdminStudentTab());
-		frame.pack();
-		frame.setVisible(true);
-	}
-
+	
 	@Override
 	public void componentHidden(ComponentEvent arg0) {
 		// TODO Auto-generated method stub

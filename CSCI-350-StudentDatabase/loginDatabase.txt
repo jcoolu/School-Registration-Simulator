@@ -1,6 +1,6 @@
 mgadiaga_0000,Thierno0391,std
 jcoulombe_0001,Jamie3221,std
-ofelizlima_002,Oliver8194,std
+ofelizlima_0002,Oliver8194,std
 kfosberg_0003,kirby3641,std
 gcastigliego_0004,Gaetano1079,std
 mgarcia_0005,Ellis6800,std
@@ -8,3 +8,4 @@ astudent_0006,Student#xxxx,std
 administrator0,Adm#0000,adm
 administrator1,Adm#0001,adm
 administrator2,Adm#0002,adm
+1,2,adm

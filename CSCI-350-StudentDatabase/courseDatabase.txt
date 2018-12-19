@@ -1,17 +1,17 @@
-CSCI 211,Computer Programming and Design,4,35
-CSCI 212,Data Structures,4, 22
-CSCI 312,Computer Organization and Architecture I,4,33
-CSCI 313,Computer Organization and Architecture II,4,20
-CSCI 325,Organization of Programming Language,4,50
-CSCI 401,Software Engineering,4,10
-CSCI 423,Analysis of Algorithms,4,54
-CSCI 435,Operating Systems and Computer Architecture,4,55
-CSCI 305,Functional Programming,4,22
-CSCI 415,Software Testing,4,53
-CSCI 416,Human-Computer interaction Design,4,1337
-CSCI 422,Introduction to Computation Theory,4,23
-CSCI 427,Introduction to Artificial Intelligence,4,12
-CSCI 437,Network Architectures and Programming,4,23
-CSCI 455,Introduction to Database Systems,4,50
-CSCI 467,Computer Science Internship,4,1
-CSCI 476,Advanced Topics in Computer Science,4,100
+CSCI 211, Computer Programming and Design
+CSCI 212, Data Structures
+CSCI 312, Computer Organization and Architecture I
+CSCI 313, Computer Organization and Architecture II
+CSCI 325, Organization of Programming Language
+CSCI 401, Software Engineering
+CSCI 423, Analysis of Algorithms
+CSCI 435, Operating Systems and Computer Architecture
+CSCI 305, Functional Programming
+CSCI 415, Software Testing
+CSCI 416, Human-Computer interaction Design
+CSCI 422, Introduction to Computation Theory
+CSCI 427, Introduction to Artificial Intelligence
+CSCI 437, Network Architectures and Programming
+CSCI 455, Introduction to Database Systems
+CSCI 467, Computer Science Internship
+CSCI 476, Advanced Topics in Computer Science
