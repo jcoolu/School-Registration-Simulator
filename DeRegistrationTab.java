@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 
 import javax.swing.*;
 
@@ -25,23 +26,23 @@ public class DeRegistrationTab extends JPanel //implements ActionListener
 
         if (student.equals("jcoulombe_0001")) 
         {
-            studentNumber = 0;
+            studentNumber = 1;
         }
         if (student.equals("ofelizlima_0002")) 
         {
-            studentNumber = 1;
+            studentNumber = 2;
         }
         if (student.equals("kfosberg_0003")) 
         {
-            studentNumber = 2;
+            studentNumber = 3;
         }
         if (student.equals("gcastigliego_0004")) 
         {
-            studentNumber = 3;
+            studentNumber = 4;
         }
         if (student.equals("mgarcia_0005")) 
         {
-            studentNumber = 4;
+            studentNumber = 5;
         }
 
         this.setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -97,15 +98,27 @@ public class DeRegistrationTab extends JPanel //implements ActionListener
         {
         public void actionPerformed(ActionEvent arg0)
         {
-        for(int i = 0;i < db.getStudent(studentNumber).getScheduleSize();i++)
-        {
-        if(db.getStudent(studentNumber).getSchedule().get(i).getCourseCode() == course_txt.getText())
-        {
-        db.getStudent(studentNumber).removeCourseIndex(i);
+            System.out.println(db.getStudent(studentNumber).getId());
+            db.getStudent(studentNumber).removeCourseCode(course_txt.getText());
+            
+            
+            // for(int i = 0;i < db.getStudent(studentNumber).getScheduleSize();i++)
+            // {
+                // if(db.getStudent(studentNumber).getSchedule().get(i).getCourseCode().equalsIgnoreCase(course_txt.getText()))
+                // {
+                    // db.getStudent(studentNumber).removeCourseIndex(i);
+                // }
+            // }
+            try{
+                db.createFile("studentDatabase.txt");
+                schedule_txt.setText(db.getStudent(studentNumber).getScheduleToString());
+            }
+            catch(IOException e)
+            {
+                e.getMessage();
+            }
         }
-        }
-        }
-        });
+            });
     }
 
     // @Override
