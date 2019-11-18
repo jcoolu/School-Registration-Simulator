@@ -220,7 +220,6 @@ public class LoginPanel extends JPanel implements ComponentListener
 		try {
 			StudentDatabase.createArrayList();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -230,7 +229,7 @@ public class LoginPanel extends JPanel implements ComponentListener
 		Scanner sc = null;
 		try 
 		{
-			File abstractFile = new File ("loginDatabase.txt");
+			File abstractFile = new File ("CS-350 FINAL/loginDatabase.txt");
 			sc = new Scanner (abstractFile);
 
 			while (sc.hasNextLine())

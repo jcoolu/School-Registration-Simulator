@@ -71,7 +71,7 @@ public class StudentDatabase {
 	 */
 
 	public static ArrayList<Student> createArrayList() throws FileNotFoundException {
-		Scanner scan = new Scanner(new File("studentDatabase.txt"));
+		Scanner scan = new Scanner(new File("CS-350 FINAL/studentDatabase.txt"));
 		scan.useDelimiter(",");
 
 		while (scan.hasNext()) {
@@ -89,7 +89,7 @@ public class StudentDatabase {
 			String studentPhoto = scan.next();
 			String numberCourse = scan.next();
 			courses = new ArrayList<Course>();
-System.out.println(id);
+//System.out.println(id);
 			for (int i = 0; i < Integer.parseInt(numberCourse); i++) {
 				courses.add(new Course(scan.next(), scan.next(), scan.next(), scan.next()));
 			}

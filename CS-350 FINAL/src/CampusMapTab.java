@@ -57,7 +57,7 @@ public class CampusMapTab extends JPanel {
 		CampusMapTab.addButton(kauffman, 579, 291,
 				"<b><u><font size=\"5\">Building 10 - " + "Joseph F. Kauffman Center</b></u></font>"
 						+ "<br><br>Building 10 is today named the Joseph F. Kauffman Center, after <br>"
-						+ "the College’s fourth president.  Recognized as one of the country’s most <br>"
+						+ "the Collegeï¿½s fourth president.  Recognized as one of the countryï¿½s most <br>"
 						+ "respected experts on leadership in higher education, Kauffman served as the<br>"
 						+ " Assistant to the President at Brandeis University before being appointed<br>"
 						+ " President of Rhode Island College in 1968.");
@@ -76,7 +76,7 @@ public class CampusMapTab extends JPanel {
 						+ "<br><b><font size=\"4\">Fax:</b></font> 1-401-456-8817<br><b><br><font size=\"4\">Email:</font></b> admissions@ric.edu or transfer@ric.edu<br><b><br"
 						+ "<font size=\"4\">>Mailing Address:</font></b> "
 						+ "<br>Office of Undergraduate Admissions<br>The Forman Center<br>Rhode Island College<br>Providence, RI 02908-1991	"
-						+ "<br><br><b><font size=\"4\">Office Hours:</font></b>Academic Year: Monday – Friday, 8:30am – 4:30pm<br>Summer: Monday – Friday, 8:00am – 4;00pm");
+						+ "<br><br><b><font size=\"4\">Office Hours:</font></b>Academic Year: Monday ï¿½ Friday, 8:30am ï¿½ 4:30pm<br>Summer: Monday ï¿½ Friday, 8:00am ï¿½ 4;00pm");
 		add(forman);
 
 		// Yellow Cottage
@@ -90,8 +90,8 @@ public class CampusMapTab extends JPanel {
 		JButton recreation = new JButton();
 		CampusMapTab.addButton(recreation, 520, 90, "<b><u><font size=\"5\">Recreation Center</b></u></font><br><br><b>"
 				+ "August 25, 2018 - December 21, 2018 <font size=\"4\">Building Hours</font></b><br>Monday - Thursday     6:00 a.m. - 11:00 p.m.<br>Friday"
-				+ "                       6:00 a.m. – 6:00 p.m.<br>Saturday                   10:00 a.m. – 2:00 p.m."
-				+ "<br>Sunday                     4:00 p.m. – 10:00 p.m.<br><br>"
+				+ "                       6:00 a.m. ï¿½ 6:00 p.m.<br>Saturday                   10:00 a.m. ï¿½ 2:00 p.m."
+				+ "<br>Sunday                     4:00 p.m. ï¿½ 10:00 p.m.<br><br>"
 				+ "Individual areas within the Recreational Center have"
 				+ "<br> different operational schedules, <br>please check below for the specific hours.<br>"
 				+ "Activities will cease 30 minutes prior to the closing time "
@@ -165,7 +165,7 @@ public class CampusMapTab extends JPanel {
 						+ "Carol Shields<br><br><font size=\"4\"><b>Contact Info:</b>"
 						+ "</font><br>(401) 456-8154<br>cshields1@ric.edu<br><br>***"
 						+ "The co-op is open Monday through Friday from 7:45 a.m.<br>"
-						+ " to 5 p.m. Use of the co-op’s facilities is limited to those<br>"
+						+ " to 5 p.m. Use of the co-opï¿½s facilities is limited to those<br>"
 						+ " hours during which the parent is in class or fulfilling a class<br>"
 						+ " obligation. The co-op follows the same academic calendar as the college.");
 		add(preschool);
@@ -325,7 +325,7 @@ public class CampusMapTab extends JPanel {
 		JButton president = new JButton();
 		CampusMapTab.addButton(president, 62, 469,
 				"<b><u><font size=\"5\">President's House</b></u></font><br><br>"
-						+ "President<br>Frank Sánchez<br>President@ric.edu<br><br><b><font size=\"4\">Contact Info: </b><br></font>"
+						+ "President<br>Frank Sï¿½nchez<br>President@ric.edu<br><br><b><font size=\"4\">Contact Info: </b><br></font>"
 						+ "(401) 456-8100<br>(401) 456-8287 (fax)<br><br><b><font size=\"4\">Address:</font></b>"
 						+ "<br>255 Fruit Hill Ave,<br>North Providence, <br>RI 02911");
 		add(president);
@@ -445,8 +445,8 @@ public class CampusMapTab extends JPanel {
 	 */
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
-		Image imgGold = new ImageIcon("Gold.png").getImage();
-		Image img = new ImageIcon("CampusMapRIC.png").getImage();
+		Image imgGold = new ImageIcon("CS-350 FINAL/Gold.png").getImage();
+		Image img = new ImageIcon("CS-350 FINAL/CampusMapRIC.png").getImage();
 		g.drawImage(imgGold, 0, 0, 1400, 728, null);
 		g.drawImage(img, 0, 0, 1024, 728, null);
 	}
