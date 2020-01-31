@@ -1,6 +1,0 @@
-0000,Mamethierno, Gadiaga,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,3.89,mgadiaga_0000.png,2,Computer Programming and Design,CSCI 211,4,35, Analysis of Algorithms,CSCI 423,4,54,123,
-0001,Jamie, Coulombe,555 Abigail Avenue,Pawtucket,RI,02869,4015897862,Computer Science,Mathematics,3.89,jcoulombe_0001.png,3,Computer Organization and Architecture II,CSCI 313,4,20,Computer Programming and Design,CSCI 211,4,35,Data Structures,CSCI 212,4, 22,34,
-0002,Oliver Feliz, Lima,4 yles avenue,providence,ri,02860,4017194562,Computer Science,Music,3.89,olima_0002.png,3,Computer Programming and Design,CSCI 211,2,35,Data Structures,CSCI 212,4,22,Computer Organization and Architecture I,CSCI 312,4,33,56,
-0003,Kirby, Forsberg,24 dangerous avenue,Woonsocket,ri,02860,4015896523,Computer Science,Art,3.89,kforsberg_0003.png,2,Computer Organization and Architecture II,CSCI 313,4,20,Organization of Programming Language,CSCI 325,4,50,66,
-0004,Gaetano, Castigliego,24 crazy avenue,Fall river,ri,02860,4018884562,Computer Science,Biology,3.89,gcastigliego_0004.png,2,Computer Programming and Design,CSCI 211,4,35,Data Structures,CSCI 212,4,22,77,
-0005,Ellis, Garcia,24 yles avenue,pawtucket,ri,02860,4015894562,Computer Science,Mathematics,3.89,egarcia_0005.png,1,Advanced Topics in Computer Science,CSCI 476,4,100,76
