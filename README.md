@@ -21,7 +21,7 @@ This program was created for our Object-Oriented Design class. Java was the main
 
 A user can either be a student or administrator.
 
-A student can:
+### A student can:
 - add & remove class from their schedule
     - ![add](/README_Pics/add.PNG)
     - ![remove](/README_Pics/drop.PNG)
@@ -31,7 +31,7 @@ A student can:
 
 ![student](/README_Pics/student.gif)
 
-An administrator can: 
+### An administrator can: 
 - add & remove students from database
 - change student's info (name, address, phone number, major, minor, total credits, gpa)
 - find any student by their designated id
@@ -43,9 +43,9 @@ An administrator can:
 - [Gaetano Castigliego](https://github.com/gcast15)
 - [Jamie Coulombe](https://github.com/jcoolu)
 - [Kirby Forsberg](https://github.com/OtherKirby)
-- [Mamethierno Gadiaga]
+- Mamethierno Gadiaga
 - [Ellis Garcia](https://github.com/elgarcia27)
-- [Oliver Feliz Lima]
+- Oliver Feliz Lima
 
 
 
