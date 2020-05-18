@@ -1,10 +1,10 @@
 # School Registration Simulator
 
 Simulation of a College level class registration system.
+
 ![login](/README_Pics/login_adm.gif)
 
 ![student](/README_Pics/student.gif)
-
 
 ## Table of Contents
 
